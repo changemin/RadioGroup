@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Radio Button Group Support Generic Type of Value for SwiftUI
 public struct CMRadioButtonGroup<T>: View {
     @Binding var value: T
     @State var options: [CMRadioOption<T>]
@@ -31,6 +32,22 @@ public struct CMRadioButtonGroup<T>: View {
         self._value = value
         self.idx = idx
     }
+    
+    public init(options: [CMRadioOption<T>], value: Binding<T>, idx: Int, color: Color) {
+        self._options = .init(initialValue: options)
+        self._value = value
+        self.idx = idx
+        self.color = color
+    }
 }
 
+public extension CMRadioButtonGroup {
+    /// Change accent color of the radio buttons
+    func accentColor(_ color: Color) -> CMRadioButtonGroup {
+        CMRadioButtonGroup(options: self.options,
+                           value: self.$value,
+                           idx: self.idx,
+                           color: color)
+    }
+}
 

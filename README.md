@@ -1,5 +1,5 @@
 <p align="center">
- <img width=500px  src="imgs/main.png" alt="Project logo"></a>
+ <img width=500px  src="imgs/main.gif" alt="Project logo"></a>
 </p>
 
 <h3 align="center">🗳 CMRadioButtonGroup 🗳</h3>

@@ -8,14 +8,14 @@
 import SwiftUI
 
 /// Cool radio button group supports generic type of value
-public struct CMRadioButton<T>: View {
+struct CMRadioButton<T>: View {
     @Binding var value: T
     @Binding var idx: Int
     var option: CMRadioOption<T>
     var size: CGFloat = 24
     var color: Color
     
-    public var body: some View {
+    var body: some View {
         HStack {
             ZStack {
                 Circle()
@@ -36,7 +36,7 @@ public struct CMRadioButton<T>: View {
         }
     }
     
-    public init(idx: Binding<Int>, option: CMRadioOption<T>, value: Binding<T>, color: Color) {
+    init(idx: Binding<Int>, option: CMRadioOption<T>, value: Binding<T>, color: Color) {
         self._idx = idx
         self.option = option
         self._value = value
