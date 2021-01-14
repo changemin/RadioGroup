@@ -7,7 +7,7 @@
 <div align="center">
 
 ![License](https://img.shields.io/github/license/Changemin/CMRadioButtonGroup?style=for-the-badge)
-![Release](https://img.shields.io/github/v/release/ChangeminCMRadioButtonGroup?style=for-the-badge)
+![Release](https://img.shields.io/github/v/release/Changemin/CMRadioButtonGroup?style=for-the-badge)
 
 
 </div>
