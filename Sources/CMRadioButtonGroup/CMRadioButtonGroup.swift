@@ -17,7 +17,6 @@ public struct CMRadioButtonGroup<T>: View {
         VStack(alignment: .leading){
             ForEach(0..<options.count, id: \.self) { idx in
                 CMRadioButton(idx: self.$idx, option: options[idx], value: $value, color: color)
-                    
             }
         }
     }

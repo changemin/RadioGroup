@@ -26,14 +26,14 @@ public struct CMRadioButton<T>: View {
                     .frame(width: idx == option.idx ? size-8 : 0, height: idx == option.idx ? size-8 : 0)
             }
             Text("\(option.label)")
-                .onTapGesture {
-                    self.value = option.value
-                    withAnimation(.spring()) {
-                        self.idx = option.idx
-                    }
-                }
-                .font(Font.system(size: 17, weight: .medium, design: .rounded))
+                .font(Font.system(size: 17, weight: .light, design: .rounded))
         }.contentShape(Rectangle())
+        .onTapGesture {
+            self.value = option.value
+            withAnimation(.spring()) {
+                self.idx = option.idx
+            }
+        }
     }
     
     public init(idx: Binding<Int>, option: CMRadioOption<T>, value: Binding<T>, color: Color) {
