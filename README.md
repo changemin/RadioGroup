@@ -32,16 +32,16 @@
     File ➜ Swift Packages ➜ Add Package Dependancy..
 
 ```Swift
-.package(url: "https://github.com/Changemin/CMRadioButtonGroup", from: "1.0.0")
+.package(url: "https://github.com/Changemin/CMRadioButtonGroup", from: "1.0.1")
 ```
 
 ## 🎈Usage
 ```Swift
 @State var value: T = 0
 var options: [CMRadioOption<T>] = [
-    CMRadioOption(idx: 0, label: "Option 1", value: 1),
-    CMRadioOption(idx: 1, label: "Option 2", value: 2),
-    CMRadioOption(idx: 2, label: "Option 3", value: 3)
+    CMRadioOption(label: "Option 1", value: 1),
+    CMRadioOption(label: "Option 2", value: 2),
+    CMRadioOption(label: "Option 3", value: 3)
 ]
 
 CMRadioButtonGroup(options: options, value: $value)
@@ -68,9 +68,9 @@ struct ContentView: View {
     @State var value: Int = 0
     
     var options: [CMRadioOption<Int>] = [
-        CMRadioOption(idx: 0, label: "Option 1", value: 1),
-        CMRadioOption(idx: 1, label: "Option 2", value: 2),
-        CMRadioOption(idx: 2, label: "Option 3", value: 3)
+        CMRadioOption(label: "Option 1", value: 1),
+        CMRadioOption(label: "Option 2", value: 2),
+        CMRadioOption(label: "Option 3", value: 3)
     ]
     
     var body: some View {
@@ -93,9 +93,9 @@ struct ContentView: View {
     @State var value: Float = 0
     
     var options: [CMRadioOption<Float>] = [
-        CMRadioOption(idx: 0, label: "Option 1(1.1)", value: 1.1),
-        CMRadioOption(idx: 1, label: "Option 2(1.2)", value: 1.2),
-        CMRadioOption(idx: 2, label: "Option 3(1.3)", value: 1.3)
+        CMRadioOption(label: "Option 1(1.1)", value: 1.1),
+        CMRadioOption(label: "Option 2(1.2)", value: 1.2),
+        CMRadioOption(label: "Option 3(1.3)", value: 1.3)
     ]
     
     var body: some View {
@@ -125,9 +125,9 @@ struct ContentView: View {
     @State var value: MyEnum = .case1
     
     var options: [CMRadioOption<MyEnum>] = [
-        CMRadioOption(idx: 0, label: "MyEnum : case1", value: .case1),
-        CMRadioOption(idx: 1, label: "MyEnum : case1", value: .case2),
-        CMRadioOption(idx: 2, label: "MyEnum : case1", value: .case3)
+        CMRadioOption(label: "MyEnum : case1", value: .case1),
+        CMRadioOption(label: "MyEnum : case1", value: .case2),
+        CMRadioOption(label: "MyEnum : case1", value: .case3)
     ]
     
     var body: some View {
