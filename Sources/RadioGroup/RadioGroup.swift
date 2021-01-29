@@ -41,7 +41,7 @@ public struct RadioGroup<T>: View {
     }
 }
 
-public extension RadioButtonGroup {
+public extension RadioGroup {
     /// Change accent color of the radio buttons
     func accentColor(_ color: Color) -> RadioGroup {
         RadioGroup(options: self.options,

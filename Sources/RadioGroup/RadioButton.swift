@@ -12,7 +12,7 @@ struct RadioButton<T>: View {
     @Binding var value: T
     @State var idx: Int
     @Binding var selectedIdx: Int
-    var option: CMRadioOption<T>
+    var option: RadioOption<T>
     var size: CGFloat = 24
     var color: Color
     
