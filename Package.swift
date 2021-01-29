@@ -13,5 +13,10 @@ let package = Package(
         .library(
             name: "RadioGroup",
             targets: ["RadioGroup"]),
+    ],
+    targets: [
+        .target(
+            name: "RadioGroup",
+            dependencies: [])
     ]
 )
