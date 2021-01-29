@@ -1,5 +1,5 @@
 //
-//  CMRadioButton.swift
+//  RadioButton.swift
 //  
 //
 //  Created by 변경민 on 2021/01/14.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-/// Cool radio button group supports generic type of value
-struct CMRadioButton<T>: View {
+/// Radio group supports generic type of value
+struct RadioButton<T>: View {
     @Binding var value: T
     @State var idx: Int
     @Binding var selectedIdx: Int
@@ -37,7 +37,7 @@ struct CMRadioButton<T>: View {
         }
     }
     
-    init(selectedIdx: Binding<Int>, idx: Int, option: CMRadioOption<T>, value: Binding<T>, color: Color) {
+    init(selectedIdx: Binding<Int>, idx: Int, option: RadioOption<T>, value: Binding<T>, color: Color) {
         self._selectedIdx = selectedIdx
         self._idx = .init(initialValue: idx)
         self.option = option
@@ -46,7 +46,7 @@ struct CMRadioButton<T>: View {
     }
 }
 
-public struct CMRadioOption<T> {
+public struct RadioOption<T> {
     var label: String = ""
     var value: T
     

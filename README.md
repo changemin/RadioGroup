@@ -2,12 +2,12 @@
  <img width=500px  src="imgs/main.gif" alt="Project logo"></a>
 </p>
 
-<h3 align="center">🗳 CMRadioButtonGroup 🗳</h3>
+<h3 align="center">🗳 SwiftUI RadioGroup 🗳</h3>
 
 <div align="center">
 
-![License](https://img.shields.io/github/license/Changemin/CMRadioButtonGroup?style=for-the-badge)
-![Release](https://img.shields.io/github/v/release/Changemin/CMRadioButtonGroup?style=for-the-badge)
+![License](https://img.shields.io/github/license/Changemin/RadioGroup?style=for-the-badge)
+![Release](https://img.shields.io/github/v/release/Changemin/RadioGroup?style=for-the-badge)
 
 
 </div>
@@ -15,7 +15,7 @@
 ---
 
 <p align="center"> 
-    Radio Button Group Support Generic Type of Value for SwiftUI
+    Radio Group Supports Generic Type of Value for SwiftUI
     <br> 
 </p>
 
@@ -32,19 +32,20 @@
     File ➜ Swift Packages ➜ Add Package Dependancy..
 
 ```Swift
-.package(url: "https://github.com/Changemin/CMRadioButtonGroup", from: "1.0.1")
+.package(url: "https://github.com/Changemin/RadioGroup", from: "1.1.0")
 ```
 
 ## 🎈Usage
 ```Swift
 @State var value: T = 0
-var options: [CMRadioOption<T>] = [
-    CMRadioOption(label: "Option 1", value: 1),
-    CMRadioOption(label: "Option 2", value: 2),
-    CMRadioOption(label: "Option 3", value: 3)
+
+var options: [RadioOption<T>] = [
+    RadioOption(label: "Option 1", value: 1),
+    RadioOption(label: "Option 2", value: 2),
+    RadioOption(label: "Option 3", value: 3)
 ]
 
-CMRadioButtonGroup(options: options, value: $value)
+RadioGroup(options: options, value: $value)
 ```
 * `options` : Array of the available options
 * `label` : Label displays beyond the button
@@ -54,7 +55,7 @@ CMRadioButtonGroup(options: options, value: $value)
 
 ## 🛠 Custom Modifiers
 ```Swift
-CMRadioButtonGroup(options: options, value: $value)
+RadioGroup(options: options, value: $value)
     .accentColor(color: Color)
 ```
 * `color` : accentColor of the button
@@ -62,20 +63,20 @@ CMRadioButtonGroup(options: options, value: $value)
 ## Example
 #### 👶 Simple
 ```Swift
-import CMRadioButtonGroup
+import RadioGroup
 
 struct ContentView: View {
     @State var value: Int = 0
     
-    var options: [CMRadioOption<Int>] = [
-        CMRadioOption(label: "Option 1", value: 1),
-        CMRadioOption(label: "Option 2", value: 2),
-        CMRadioOption(label: "Option 3", value: 3)
+    var options: [RadioOption<Int>] = [
+        RadioOption(label: "Option 1", value: 1),
+        RadioOption(label: "Option 2", value: 2),
+        RadioOption(label: "Option 3", value: 3)
     ]
     
     var body: some View {
         VStack {
-            CMRadioButtonGroup(options: options, value: $value)
+            RadioGroup(options: options, value: $value)
         }
     }
 }
@@ -87,20 +88,20 @@ struct ContentView: View {
 
 ### 🎨 Accent Color, Other value type
 ```Swift
-import CMRadioButtonGroup
+import RadioGroup
 
 struct ContentView: View {
     @State var value: Float = 0
     
-    var options: [CMRadioOption<Float>] = [
-        CMRadioOption(label: "Option 1(1.1)", value: 1.1),
-        CMRadioOption(label: "Option 2(1.2)", value: 1.2),
-        CMRadioOption(label: "Option 3(1.3)", value: 1.3)
+    var options: [RadioOption<Float>] = [
+        RadioOption(label: "Option 1(1.1)", value: 1.1),
+        RadioOption(label: "Option 2(1.2)", value: 1.2),
+        RadioOption(label: "Option 3(1.3)", value: 1.3)
     ]
     
     var body: some View {
         VStack {
-            CMRadioButtonGroup(options: options, value: $value)
+            RadioGroup(options: options, value: $value)
                 .accentColor(.orange)
         }
     }
@@ -113,7 +114,7 @@ struct ContentView: View {
 
 ### 📚 Advanced, Custom type(enum)
 ```Swift
-import CMRadioButtonGroup
+import RadioGroup
 
 enum MyEnum {
     case case1
@@ -124,14 +125,14 @@ enum MyEnum {
 struct ContentView: View {
     @State var value: MyEnum = .case1
     
-    var options: [CMRadioOption<MyEnum>] = [
-        CMRadioOption(label: "MyEnum : case1", value: .case1),
-        CMRadioOption(label: "MyEnum : case1", value: .case2),
-        CMRadioOption(label: "MyEnum : case1", value: .case3)
+    var options: [RadioOption<MyEnum>] = [
+        RadioOption(label: "MyEnum : case1", value: .case1),
+        RadioOption(label: "MyEnum : case1", value: .case2),
+        RadioOption(label: "MyEnum : case1", value: .case3)
     ]
     
     var body: some View {
-        CMRadioButtonGroup(options: options, value: $value)
+        RadioGroup(options: options, value: $value)
     }
 }
 
@@ -144,7 +145,7 @@ struct ContentView: View {
 
 ## 📜 License
 
-CMRadioButtonGroup is available under the MIT license. See the `LICENSE` file for more info.
+RadioGroup is available under the MIT license. See the `LICENSE` file for more info.
 
 ## ✅ Todos
 - [ ] design variation
